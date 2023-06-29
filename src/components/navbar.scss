@@ -1,0 +1,76 @@
+.navbar {
+    width: 100%;
+    padding: 20px 0;
+    color: white;
+    position: relative;
+    .navbar__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .navbar__logo {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .navbar__menu {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            @media screen and (max-width: 500px) {
+                display: none;
+            }
+            li {
+                list-style: none;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 14px;
+                &::after {
+                    width: 30%;
+                    border-bottom: 2px solid white;
+                    content: '';
+                    display: none;
+                    transform: translateY(5px);
+                }
+            }
+            .active {
+                color: white;
+                &::after {
+                    display: block;
+                }
+            }
+        }
+        .navbar__mobile {
+            display: none;
+            @media screen and (max-width: 500px) {
+                display: block;
+            }
+            .menu__icon {
+                font-size: 30px;
+                cursor: pointer;
+            }
+            .navbar__mobile-menu {
+                margin-top: 10px;
+                position: absolute;
+                left: auto;
+                right: 0;
+                width: 200px;
+                height: auto;
+                background: rgb(71, 71, 207);
+                z-index: 999;
+                padding: 15px;
+                border-radius: 10px;
+                li {
+                    list-style: none;
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 16px;
+                    padding: 15px;
+                    width: 100%;
+                    text-align: center;
+                    &:hover {
+                        background: rgba(211, 211, 211, 0.297);
+                    }
+                }
+            }
+        }
+    }
+}

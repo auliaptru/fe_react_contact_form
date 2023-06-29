@@ -1,0 +1,49 @@
+.form {
+    .form__wrapper {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            color: #565ded;
+            @media screen and (max-width: 1024px) {
+                font-size: 22px;
+            }
+        }
+        p {
+            margin: 5px 0;
+            color: #534e79;
+            font-weight: 500;
+            @media screen and (max-width: 1024px) {
+                font-size: 14px;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 10px;
+            input,
+            textarea {
+                background-color: #eeeef8;
+                border: none;
+                padding: 13px;
+                border-radius: 5px;
+                @media screen and (max-width: 500px) {
+                    font-size: 13px;
+                }
+            }
+            button {
+                padding: 12px;
+                font-size: 1rem;
+                background: #565ded;
+                color: white;
+                font-weight: 600;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                @media screen and (max-width: 500px) {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
